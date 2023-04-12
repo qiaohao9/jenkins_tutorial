@@ -5,11 +5,13 @@ pipeline {
         string(name: 'name', defaultValue: '', description: '')
     }
 
+    environment {
+        name = params.name
+    }
+
     stages {
         stage("print git hash") {
-            envrionment {
-                name = params.name
-            }
+
             steps {
                 sh 'echo "git commit hash: $GIT_COMMIT"'
                 sh 'echo "parameters ${name}"'

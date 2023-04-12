@@ -9,7 +9,7 @@ pipeline {
         stage("print git hash") {
             steps {
                 sh 'echo "git commit hash: $GIT_COMMIT"'
-                sh 'echo "parameters $params.name"'
+                sh 'echo "parameters ${params.name}"'
             }
         }
     }

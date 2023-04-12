@@ -14,6 +14,7 @@ pipeline {
                     changelog: true,
                     poll: true
                 )
+                sh 'pwd'
                 sh 'ls'
             }
         }

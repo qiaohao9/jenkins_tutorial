@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage("print git hash") {
             steps {
-                sh 'echo "$GIT_COMMIT"'
+                sh 'echo "git commit hash: $GIT_COMMIT"'
+                sh 'echo "parameters $params.name"'
             }
         }
     }

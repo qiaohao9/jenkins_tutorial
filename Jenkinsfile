@@ -14,7 +14,7 @@ pipeline {
                     changelog: true,
                     poll: true
                 )
-                sh 'ls dotfiles'
+                sh 'ls'
             }
         }
 

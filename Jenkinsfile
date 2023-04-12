@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    parameters {
+        string(name: 'name', defaultValue: '', description: 'name')
+    }
+
     stages {
         stage("print git hash") {
             steps {

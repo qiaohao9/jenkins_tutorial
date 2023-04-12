@@ -7,13 +7,15 @@ pipeline {
 
     stages {
         stage("clone the repository with branch") {
-            git (
-                url: "https://github.com/qiaohao9/dotfiles.git",
-                branch: "master",
-                changelog: true,
-                poll: true
-            )
-            sh 'ls dotfiles'
+            steps {
+                git (
+                    url: "https://github.com/qiaohao9/dotfiles.git",
+                    branch: "master",
+                    changelog: true,
+                    poll: true
+                )
+                sh 'ls dotfiles'
+            }
         }
 
         stage("print git hash") {

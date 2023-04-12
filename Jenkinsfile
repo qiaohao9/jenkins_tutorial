@@ -15,6 +15,7 @@ pipeline {
                     poll: true
                 )
                 sh 'pwd'
+                sh 'echo $WORKSPACE'
                 sh 'ls'
             }
         }

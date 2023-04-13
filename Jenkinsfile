@@ -16,7 +16,7 @@ pipeline {
                 )
                 sh 'pwd'
                 sh 'echo $WORKSPACE'
-                sh 'ls'
+                sh 'ls -la'
             }
         }
 

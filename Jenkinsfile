@@ -8,14 +8,16 @@ pipeline {
   stages {
     stage("clone the repository with branch") {
       steps {
-        dir("dotfiles") {
+        dir("here") {
           git (
             url: "https://github.com/qiaohao9/dotfiles.git",
             branch: "master",
             changelog: true,
             poll: true
           )
+
           sh 'pwd'
+          sh 'ls -la'
         }
 
         sh 'pwd'
